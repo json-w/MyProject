@@ -1,0 +1,9 @@
+CREATE TABLE `student` (
+  `sid` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `age` int(10) NOT NULL,
+  `sex` varchar(10) NOT NULL,
+  `number` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
