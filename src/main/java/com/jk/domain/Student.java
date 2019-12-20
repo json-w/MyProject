@@ -2,19 +2,19 @@ package com.jk.domain;
 
 // 实体类
 public class Student {
-    private int s_id;
+    private int sid;
     private String name;
     private int age;
     private String sex;
     private String number;
     private String address;
 
-    public int getS_id() {
-        return s_id;
+    public int getSid() {
+        return sid;
     }
 
-    public void setS_id(int s_id) {
-        this.s_id = s_id;
+    public void setSid(int sid) {
+        this.sid = sid;
     }
 
     public String getName() {
@@ -60,7 +60,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "s_id=" + s_id +
+                "sid=" + sid +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", sex='" + sex + '\'' +

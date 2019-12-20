@@ -5,6 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="student/findAll">测试查询</a>
+<a href="/student/findAll.do">测试查询</a>
 </body>
 </html>

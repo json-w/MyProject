@@ -24,18 +24,18 @@
 
     <c:forEach items="${studentList}" var="student">
         <tr class="active">
-            <td>${student.s_id }</td>
+            <td>${student.sid }</td>
             <td>${student.name }</td>
             <td>${student.age }</td>
             <td>${student.sex }</td>
             <td>${student.number }</td>
             <td>${student.address}</td>
             <td class="text-center">
-                <a href="${pageContext.request.contextPath}/student/findById?id=${student.s_id}" class="btn bg-olive btn-xs">学生详情</a>
+                <a href="${pageContext.request.contextPath}/student/findById.do?id=${student.sid}" class="btn bg-olive btn-xs">学生详情</a>
                 <a href="${pageContext.request.contextPath}/page/add.jsp"class="btn bg-olive btn-xs">添加学生信息</a>
                 <%--<a href="${pageContext.request.contextPath}/WEB-INF/page/add.jsp" class="btn bg-olive btn-xs">添加角色</a>--%>
-                <a href="${pageContext.request.contextPath}/student/del?id=${student.s_id}" class="btn bg-olive btn-xs">删除学生信息</a>
-                <a href="${pageContext.request.contextPath}/student/findWithUpdate?id=${student.s_id}" class="btn bg-olive btn-xs">修改学生信息</a>
+                <a href="${pageContext.request.contextPath}/student/del.do?id=${student.sid}" class="btn bg-olive btn-xs">删除学生信息</a>
+                <a href="${pageContext.request.contextPath}/student/findWithUpdate.do?id=${student.sid}" class="btn bg-olive btn-xs">修改学生信息</a>
             </td>
         </tr>
     </c:forEach>

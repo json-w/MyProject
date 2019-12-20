@@ -18,12 +18,12 @@ public interface Istudentdao {
     @Insert("insert into student(name,age,sex,number,address) values (#{name},#{age},#{sex},#{number},#{address})")
     public void save(Student student);
 
-    @Select("select * from student where s_id=#{id}")
+    @Select("select * from student where sid=#{id}")
     Student findById(int id);
 
-    @Delete("delete from student where s_id=#{id}")
+    @Delete("delete from student where sid=#{id}")
     void deleteStu(int id);
 
-    @Update("update student set name=#{name},age=#{age},sex=#{sex},number=#{number},address=#{address} where s_id=#{s_id}")
+    @Update("update student set name=#{name},age=#{age},sex=#{sex},number=#{number},address=#{address} where sid=#{sid}")
     int updeteStu(Student student);
 }

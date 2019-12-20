@@ -16,7 +16,7 @@ public class StudentController {
     private StudentService studentService;
 
     // 查询全部用户
-    @RequestMapping("/findAll")
+    @RequestMapping("/findAll.do")
     public ModelAndView findAll(ModelAndView modelAndView){
         List<Student> studentList = studentService.findAll();
         modelAndView.addObject("studentList",studentList);
@@ -25,14 +25,14 @@ public class StudentController {
     }
 
     // 储存用户信息
-    @RequestMapping("/save")
+    @RequestMapping("/save.do")
     public String save(Student student){
         studentService.save(student);
-        return "redirect:findAll";
+        return "redirect:findAll.do";
     }
 
     // 查询学生详情
-    @RequestMapping("/findById")
+    @RequestMapping("/findById.do")
     public ModelAndView findById(int id,ModelAndView modelAndView){
         Student studentInfo = studentService.findById(id);
         System.out.println(studentInfo);
@@ -41,14 +41,14 @@ public class StudentController {
         return modelAndView;
     }
     // 删除学生信息
-    @RequestMapping("/del")
+    @RequestMapping("/del.do")
     public String delStudent(int id){
         studentService.deleteStu(id);
-        return "redirect:findAll";
+        return "redirect:findAll.do";
     }
 
     // 修改前的查询操作
-    @RequestMapping("/findWithUpdate")
+    @RequestMapping("/findWithUpdate.do")
     public ModelAndView findByIdForUp(int id,ModelAndView modelAndView){
         Student student = studentService.findById(id);
         modelAndView.addObject("student",student);
@@ -56,9 +56,9 @@ public class StudentController {
         return modelAndView;
     }
     // 修改学生信息
-    @RequestMapping("/update")
+    @RequestMapping("/update.do")
     public String updStudentById(Student student){
         studentService.updateStu(student);
-        return "redirect:findAll";
+        return "redirect:findAll.do";
     }
 }
